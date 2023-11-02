@@ -432,7 +432,7 @@ Regards,
 Rehan
 irehankhan@Rehans-Mac-mini Assign-1 my-webapp % 
 ```
-## docker Attach Command
+## Docker Attach Command
 ```bash
 docker attach <id>
 ```
@@ -661,9 +661,25 @@ After that i opened another terminal window below and run a command to stop this
 
 ![Alt text](image-3.png)
 ## Docker Attach Command
+```bash
+docker attach <id>
+```
+First i run a caontainer in detached mode then using above command i attached it again to the terminal. Please check below log<br>
+<i>Note: The attach command will display the output of the ENTRYPOINT process.</i>
 
-
-
+```bash
+irehankhan@Rehans-Mac-mini Assign-1 my-webapp % docker run -d -p 2024:5000 --name my-webapp-contanier4 irehankhan/my-webapp:1.0 
+8faea85eed1e4fe8e954fd996553d2c75c962fd72a460464dfa121b47b927669
+irehankhan@Rehans-Mac-mini Assign-1 my-webapp % docker attach 8faea85eed1e4fe8e954fd996553d2c75c962fd72a460464dfa121b47b927669  
+192.168.65.1 - - [02/Nov/2023 12:44:36] "GET / HTTP/1.1" 200 -
+192.168.65.1 - - [02/Nov/2023 12:44:36] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.65.1 - - [02/Nov/2023 12:44:46] "GET /how%20are%20you HTTP/1.1" 200 -
+192.168.65.1 - - [02/Nov/2023 12:45:24] "GET / HTTP/1.1" 200 -
+192.168.65.1 - - [02/Nov/2023 12:45:24] "GET /favicon.ico HTTP/1.1" 404 -
+192.168.65.1 - - [02/Nov/2023 12:45:34] "GET /how%20are%20you HTTP/1.1" 200 -
+192.168.65.1 - - [02/Nov/2023 12:46:52] "GET / HTTP/1.1" 200 -
+192.168.65.1 - - [02/Nov/2023 12:46:59] "GET /how%20are%20you HTTP/1.1" 200 -
+```
 ## Docker port Command
 Docker port command is used to display the public facing port that a container is listening on
 ```bash
