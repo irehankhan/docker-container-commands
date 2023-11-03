@@ -754,9 +754,9 @@ c2363d066419   irehankhan/create-new-image-from-my-webapp-container   "/bin/sh -
 ```
 
 ### To Access Docker Hub Repository
-Please use below link and pull/run (irehankhan/my-webapp:1.0) Repository
+Please use below link and pull/run (irehankhan/my-webapp:1.0) Repository-tag 1.0
 ```html
-    https://hub.docker.com/r/irehankhan/my-webapp
+    https://hub.docker.com/r/irehankhan/my-webapp/tags
 ```
 
 <h1></h1>
