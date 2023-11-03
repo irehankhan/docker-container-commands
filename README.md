@@ -1,4 +1,5 @@
 # Docker Containers with Commands
+
 ## Docker Container Run Command
 
 ```bash 
@@ -36,7 +37,7 @@ Press CTRL+C to quit
 ```bash 
 docker ps
 ```
-This command will show running containers. Below two Containers are runnig. (89bc57dbd074 & 30f38eba4c58)
+This command will show running containers. Below two Containers are running. (89bc57dbd074 & 30f38eba4c58)
 ```bash
 irehankhan@Rehans-Mac-mini Assign-1 my-webapp % docker ps
 CONTAINER ID   IMAGE                      COMMAND                  CREATED         STATUS         PORTS                    NAMES
@@ -65,7 +66,7 @@ CONTAINER ID   IMAGE                      COMMAND                  CREATED      
 89bc57dbd074   irehankhan/my-webapp:1.0   "/bin/sh -c 'FLASK_A…"   5 minutes ago   Up 5 minutes   0.0.0.0:2021->5000/tcp   my-webapp-container3
 30f38eba4c58   irehankhan/my-webapp:1.0   "/bin/sh -c 'FLASK_A…"   6 minutes ago   Up 6 minutes   0.0.0.0:2020->5000/tcp   my-webapp-container
 ```
-```bahs
+```bash
 docker stop 89b
 ```
 ```bash
@@ -78,7 +79,7 @@ CONTAINER ID   IMAGE                      COMMAND                  CREATED      
 ```
 ## Remove Stopped Container
 To remove container below command is used with its container id. Below i will embed logs in which i will show all containers and remove one from them. <br>
-<i>Note: Before removing contanier first it must be stopped.</i>
+<i>Note: Before removing container first it must be stopped.</i>
 
 ```bash 
 docker rm <c.id>
@@ -104,7 +105,7 @@ CONTAINER ID   IMAGE                      COMMAND                  CREATED      
 
 ##  Docker Container Logs
 
-To Check docker container logs below command is used with contaner id.
+To Check docker container logs below command is used with container id.
 ```bash
 docker logs <id>
 ```
@@ -131,7 +132,7 @@ irehankhan@Rehans-Mac-mini Assign-1 my-webapp %
 ```
 ##  Docker Container Inspect
 
-To inspect docker container below command is used with contaner id.
+To inspect docker container below command is used with container id.
 
 ```bash
 docker inspect <id>
@@ -436,7 +437,7 @@ irehankhan@Rehans-Mac-mini Assign-1 my-webapp %
 ```bash
 docker attach <id>
 ```
-First i run a caontainer in detached mode then using above command i attached it again to the terminal. Please check below log<br>
+First i run a container in detached mode then using above command i attached it again to the terminal. Please check below log<br>
 <i>Note: The attach command will display the output of the ENTRYPOINT process.</i>
 
 ```bash
@@ -522,7 +523,7 @@ test-file.txt
 irehankhan@Rehans-Mac-mini docker-shared-folder % 
 ```
 ## Docekr Stats Command
-This command is used to check resource usage/statistics of specific container or all containers and display as a live stream on terminal and we can also use an option (--no-stream) in this command to diable streaming stats and pull the first result only.
+This command is used to check resource usage/statistics of specific container or all containers and display as a live stream on terminal and we can also use an option (--no-stream) in this command to disable streaming stats and pull the first result only.
 ```bash
 docker stats or docker stats --no-stream
 ```
@@ -664,7 +665,7 @@ After that i opened another terminal window below and run a command to stop this
 ```bash
 docker attach <id>
 ```
-First i run a caontainer in detached mode then using above command i attached it again to the terminal. Please check below log<br>
+First i run a container in detached mode then using above command i attached it again to the terminal. Please check below log<br>
 <i>Note: The attach command will display the output of the ENTRYPOINT process.</i>
 
 ```bash
@@ -728,7 +729,7 @@ Docker command is used to restart a container
 ```bash
 docker restart container_name
 ```
-In below Logs i stopped contaner "my-webapp-container" and then restart it.
+In below Logs i stopped container "my-webapp-container" and then restart it.
 ```bash
 irehankhan@Rehans-Mac-mini Assign-1-my-webapp % docker stop my-webapp-container
 my-webapp-container
